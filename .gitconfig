@@ -1,0 +1,68 @@
+[user]
+	name = Janos Kasza
+    email = janos@plexapp.com
+    #signingkey = EA6D63C42E45E6B8
+[core]
+	autocrlf = input
+	preloadindex = true
+	fscache = true
+	excludesfile = /Users/jkasza/.gitignore
+    editor = /usr/bin/vim
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+    dt = difftool
+    br = branch
+    echoes = !sh -c 'echo hi && echo bye'
+    show-branches = "!f() { git branch -a | cut -c 3- | sed -e 's,remotes/origin/,,'; }; f"
+    pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
+    coo = "!f() { git checkout `git show-branches | grep $1 | head -n1`; }; f"
+    # cleanup = "!f() { git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d; git branch --list master-release-\\* | xargs git branch -d; }; f"
+    cleanup = "!f() { git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d; }; f"
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    rbi = "!f() { if [ -z \"${1}\" ]; then git rebase -i origin/master; else git rebase -i \"${1}\"; fi; }; f"
+    logg = "!f(){ git log --no-abbrev-commit $@; }; f"
+    alias = "!git config --get-regexp ^alias\\."
+[gc]
+	auto = 256
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[push]
+    default = current
+    autoSetupRemote = true
+[pull]
+    ff = only
+[rebase]
+	autosquash = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+
+# Delta pager settings
+[core]
+    pager = "delta --dark"
+[interactive]
+    diffFilter = delta --color-only --dark
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[log]
+    abbrevCommit = yes
+[delta]
+    navigate = true
+    #syntax-theme = zenburn
+    dark = true
+    light = false
+    features = line-numbers decorations
+    whitespace-error-style = 22 reverse
+    pager = less -F -R -X -+J
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+[commit]
+    #gpgsign = true

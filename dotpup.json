@@ -1,0 +1,23 @@
+{
+  "operations": {
+    "Darwin": {
+      ".config/kitty/kitty.app.png": "$HOME/.config/kitty/kitty.app.png",
+      ".config/kitty/kitty.conf": "$HOME/.config/kitty/kitty.conf",
+      ".gitconfig": "$HOME/.gitconfig",
+      ".p10k.zsh": "$HOME/.p10k.zsh",
+      ".profile": "$HOME/.profile",
+      ".vimrc": "$HOME/.vimrc",
+      ".zprofile": "$HOME/.zprofile",
+      ".zshrc": "$HOME/.zshrc",
+      "Library/Preferences/com.googlecode.iterm2.plist": "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
+    },
+    "Linux": {
+      ".gitconfig": "$HOME/.gitconfig",
+      ".p10k.zsh": "$HOME/.p10k.zsh",
+      ".profile": "$HOME/.profile",
+      ".vimrc": "$HOME/.vimrc",
+      ".zprofile": "$HOME/.zprofile",
+      ".zshrc": "$HOME/.zshrc"
+    }
+  }
+}
