@@ -16,7 +16,6 @@
       ".p10k.zsh": "$HOME/.p10k.zsh",
       ".profile": "$HOME/.profile",
       ".vimrc": "$HOME/.vimrc",
-      ".zprofile": "$HOME/.zprofile",
       ".zshrc": "$HOME/.zshrc"
     }
   }
