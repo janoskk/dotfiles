@@ -6,6 +6,7 @@
       ".config/kitty/macos-launch-services-cmdline": "$HOME/.config/kitty/macos-launch-services-cmdline",
       ".config/kitty/themes/gruvbox-dark-hard-tabbar.conf": "$HOME/.config/kitty/themes/gruvbox-dark-hard-tabbar.conf",
       ".config/kitty/themes/gruvbox-light-hard-tabbar.conf": "$HOME/.config/kitty/themes/gruvbox-light-hard-tabbar.conf",
+      ".config/nvim/init.vim": "$HOME/.config/nvim/init.vim",
       ".gitconfig": "$HOME/.gitconfig",
       ".p10k.zsh": "$HOME/.p10k.zsh",
       ".profile": "$HOME/.profile",
