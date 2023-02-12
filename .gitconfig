@@ -43,9 +43,9 @@
 
 # Delta pager settings
 [core]
-    pager = "delta --dark"
+    pager = "delta"
 [interactive]
-    diffFilter = delta --color-only --dark
+    diffFilter = delta --color-only
 [merge]
     conflictstyle = diff3
 [diff]
@@ -64,5 +64,11 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+[delta "my-light-mode"]
+    light = true
+    syntax-theme = gruvbox-light
+[delta "my-dark-mode"]
+    dark = true
+    syntax-theme = gruvbox-dark
 [commit]
     #gpgsign = true
