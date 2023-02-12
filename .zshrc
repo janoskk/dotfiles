@@ -71,6 +71,8 @@ bindkey "^[[H"    beginning-of-line
 bindkey "^[[F"    end-of-line
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+bindkey '^[[1;2A' up-line-or-history 
+bindkey '^[[1;2B' down-line-or-history 
 
 case `uname` in
   Darwin)
@@ -110,6 +112,9 @@ LOCAL_RC=~/.zshrc_$(hostname)
 # Load powerlevel10k config
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
+# Load terminal color-specific config
+[[ -f ~/.term-theme ]] && source ~/.term-theme
+
 # McFly
 eval "$(mcfly init zsh)"
 
@@ -119,8 +124,34 @@ alias ll='ls -l'
 alias l='ls -l'
 alias la='ls -la'
 alias grep='grep --color=auto'
+alias vim=nvim
 
 if [ -n "${KITTY_PID}" ]; then
     alias ssh="kitty +kitten ssh"
 fi
 
+# Alias to rewrite current terminal color settings
+nox() {
+    DARKMODE=1 ~/Git/scripts/dark-mode-callback.sh
+}
+lumos() {
+    DARKMODE=0 ~/Git/scripts/dark-mode-callback.sh
+}
+reload-term-colors()
+{
+    source ~/.term-theme
+}
+typeset -a preexec_functions
+preexec_functions+=(reload-term-colors)
+
+# https://gist.github.com/hoop33/06f2d5a9555997d739def91c2ab402b6
+kittycolors() {
+  if [[ $# -eq 0 ]]; then
+    grep -o "#[a-f0-9]\{6\}" ~/.config/kitty/current-theme.conf | pastel color
+  else
+    case $1 in
+      short|--short|-s) for COLOR in $(grep -o "#[a-f0-9]\{6\}" ~/.config/kitty/current-theme.conf); do pastel paint $(pastel textcolor $COLOR) --on $COLOR "$COLOR          "; done ;;
+      *) echo "usage: kittycolors [-s]" ;; 
+    esac
+  fi
+}
