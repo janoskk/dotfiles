@@ -115,6 +115,11 @@ LOCAL_RC=~/.zshrc_$(hostname)
 # Load terminal color-specific config
 [[ -f ~/.term-theme ]] && source ~/.term-theme
 
+# Load config from ~/.zshrc.d/
+for config in ~/.zshrc.d/*; do
+  source ${config}
+done
+
 # McFly
 eval "$(mcfly init zsh)"
 

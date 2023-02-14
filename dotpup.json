@@ -16,11 +16,13 @@
       "Library/Preferences/com.googlecode.iterm2.plist": "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
     },
     "Linux": {
+      ".config/nvim/init.vim": "$HOME/.config/nvim/init.vim",
       ".gitconfig": "$HOME/.gitconfig",
       ".p10k.zsh": "$HOME/.p10k.zsh",
       ".profile": "$HOME/.profile",
       ".vimrc": "$HOME/.vimrc",
-      ".zshrc": "$HOME/.zshrc"
+      ".zshrc": "$HOME/.zshrc",
+      ".zshrc.d/win-aliases": "$HOME/.zshrc.d/win-aliases"
     }
   }
 }

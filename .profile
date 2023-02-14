@@ -1,5 +1,5 @@
 # Recommended packages:
-# ripgrep rlwrap
+# ripgrep rlwrap mcfly delta neovim xz unzip zstd 
 
 #
 # General settings
@@ -61,11 +61,6 @@ if [ "$(uname -s)" = "Linux" ] || [ "$(uname -s)" = "Darwin" ]; then
             watch --differences "find ~/Plex-Library -ls | egrep '.grab/.*ts' | cat"
         }
         alias plex-virtual-tuner="$HOME/Git/plex-media-server/scripts/test/VirtualTuner.py -l -c $HOME/Git/plex-media-server/scripts/test/sample-tuner-config.json"
-        alias win-start="sudo virsh start --domain janoskk-wyzen-v"
-        alias win-shutdown="sudo virsh shutdown --domain janoskk-wyzen-v"
-        alias win-suspend="sudo virsh suspend --domain janoskk-wyzen-v"
-        alias win-resume="sudo virsh resume --domain janoskk-wyzen-v"
-        alias win-status="sudo virsh list --all"
     else
         ###
         ### macOS-specific settings

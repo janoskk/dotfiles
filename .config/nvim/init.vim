@@ -43,3 +43,6 @@ try
 catch
 endtry
 
+
+" Disable automatic visual mode on mouse select
+"set mouse=

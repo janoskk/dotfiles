@@ -1,0 +1,8 @@
+# KVM Windows guest-related aliases
+
+alias win-start="sudo virsh start --domain janoskk-wyzen-v"
+alias win-shutdown="sudo virsh shutdown --domain janoskk-wyzen-v"
+alias win-suspend="sudo virsh suspend --domain janoskk-wyzen-v"
+alias win-resume="sudo virsh resume --domain janoskk-wyzen-v"
+alias win-status="sudo virsh list --all"
+alias win-time="sudo virsh qemu-agent-command janoskk-wyzen-v '{\"execute\":\"guest-set-time\"}'"
