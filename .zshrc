@@ -149,14 +149,3 @@ reload-term-colors()
 typeset -a preexec_functions
 preexec_functions+=(reload-term-colors)
 
-# https://gist.github.com/hoop33/06f2d5a9555997d739def91c2ab402b6
-kittycolors() {
-  if [[ $# -eq 0 ]]; then
-    grep -o "#[a-f0-9]\{6\}" ~/.config/kitty/current-theme.conf | pastel color
-  else
-    case $1 in
-      short|--short|-s) for COLOR in $(grep -o "#[a-f0-9]\{6\}" ~/.config/kitty/current-theme.conf); do pastel paint $(pastel textcolor $COLOR) --on $COLOR "$COLOR          "; done ;;
-      *) echo "usage: kittycolors [-s]" ;; 
-    esac
-  fi
-}

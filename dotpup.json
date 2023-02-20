@@ -13,6 +13,8 @@
       ".vimrc": "$HOME/.vimrc",
       ".zprofile": "$HOME/.zprofile",
       ".zshrc": "$HOME/.zshrc",
+      ".zshrc.d/aliases": "$HOME/.zshrc.d/aliases",
+      ".zshrc.d/kittycolors": "$HOME/.zshrc.d/kittycolors",
       "Library/Preferences/com.googlecode.iterm2.plist": "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
     },
     "Linux": {
@@ -22,6 +24,8 @@
       ".profile": "$HOME/.profile",
       ".vimrc": "$HOME/.vimrc",
       ".zshrc": "$HOME/.zshrc",
+      ".zshrc.d/aliases": "$HOME/.zshrc.d/aliases",
+      ".zshrc.d/kittycolors": "$HOME/.zshrc.d/kittycolors",
       ".zshrc.d/win-aliases": "$HOME/.zshrc.d/win-aliases"
     }
   }

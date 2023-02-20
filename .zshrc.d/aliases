@@ -1,0 +1,3 @@
+# List my open PRs on GitHub
+alias pr="gh pr list --author "@me" --json title,url"
+alias prs="pr"
