@@ -1,3 +1,3 @@
 # List my open PRs on GitHub
-alias pr="gh pr list --author "@me" --json title,url"
+alias pr='[[ -d .git ]] && gh pr list --author "@me" --json title,url || gh pr list --author "@me" --json title,url -R https://github.com/plexinc/plex-media-server.git'
 alias prs="pr"
