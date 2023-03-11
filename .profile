@@ -181,7 +181,7 @@ FIXES:
 INTERNAL:
 - (Collections) Note (#12345)
 EOF
-    vim "$1"
+    $EDITOR "$1"
 }
 
 #
