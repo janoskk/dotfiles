@@ -11,7 +11,7 @@ call plug#begin()
 
 Plug 'tpope/vim-sensible'
 if (!exists('g:vscode'))
-Plug 'morhetz/gruvbox'
+  Plug 'morhetz/gruvbox'
 endif
 
 " Initialize plugin system
@@ -45,6 +45,8 @@ try
 catch
 endtry
 
+" Set indent to two spaces
+set autoindent expandtab tabstop=2 shiftwidth=2
 
 " Disable automatic visual mode on mouse select
 "set mouse=
