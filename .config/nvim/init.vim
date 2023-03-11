@@ -10,7 +10,9 @@ call plug#begin()
 " Make sure you use single quotes
 
 Plug 'tpope/vim-sensible'
+if (!exists('g:vscode'))
 Plug 'morhetz/gruvbox'
+endif
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
