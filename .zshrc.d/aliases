@@ -1,3 +1,17 @@
-# List my open PRs on GitHub
+# Basics
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias l='ls -l'
+alias la='ls -la'
+alias grep='grep --color=auto'
+alias vim=nvim
+alias s='git status'
+
+# kitty's ssh connection handler
+if [ -n "${KITTY_PID}" ]; then
+  alias ssh="kitty +kitten ssh"
+fi
+
+# list my open PRs on GitHub
 alias pr='[[ -d .git ]] && gh pr list --author "@me" --json title,url || gh pr list --author "@me" --json title,url -R https://github.com/plexinc/plex-media-server.git'
 alias prs="pr"

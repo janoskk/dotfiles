@@ -123,18 +123,6 @@ done
 # McFly
 eval "$(mcfly init zsh)"
 
-# Aliases
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias l='ls -l'
-alias la='ls -la'
-alias grep='grep --color=auto'
-alias vim=nvim
-
-if [ -n "${KITTY_PID}" ]; then
-    alias ssh="kitty +kitten ssh"
-fi
-
 # Alias to rewrite current terminal color settings
 nox() {
     DARKMODE=1 ~/Git/scripts/dark-mode-callback.sh
