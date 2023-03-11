@@ -47,7 +47,7 @@ if [ "$(uname -s)" = "Linux" ] || [ "$(uname -s)" = "Darwin" ]; then
                 echo "Opening custom database"
                 DB="$1"
             fi
-            rlwrap ~/Git/plex-media-server/build/build/Plex\ Media\ Server --sqlite "${DB}"
+            ~/Git/plex-media-server/build/build/Plex\ Media\ Server --sqlite "${DB}"
         }
         function vs-kill() {
             kill -9 `ps ax | grep "remoteExtensionHostAgent.js" | grep -v grep | awk '{print $1}'`
