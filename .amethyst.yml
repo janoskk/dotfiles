@@ -1,0 +1,28 @@
+layouts:
+  - two-pane
+  - fullscreen
+  - tall
+  - wide
+  - column
+
+mod1:
+  - option
+  - control
+
+float-small-windows: true
+floating:
+  - com.apple.systempreferences
+  - com.apple.finder
+  - com.microsoft.rdc.macos
+
+# Modify the amethyst relaunch to use x and not z
+relaunch-amethyst:
+  mod: mod1
+  key: x
+
+# Add 10px margin between windows
+window-margins: true
+window-margin-size: 7
+
+# Don't show layout name on space change
+enables-layout-hud-on-space-change: false
