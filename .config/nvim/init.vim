@@ -11,11 +11,16 @@ call plug#begin()
 
 Plug 'tpope/vim-sensible'
 if (!exists('g:vscode'))
+  " Gruvbox theme
   Plug 'morhetz/gruvbox'
 
+  " Custom status line
   Plug 'nvim-lualine/lualine.nvim'
   " Icons for lualine
   Plug 'kyazdani42/nvim-web-devicons'
+  
+  " Plugin for reopening files at the last edit position
+  Plug 'farmergreg/vim-lastplace'
 endif
 
 " Initialize plugin system
@@ -57,4 +62,3 @@ endif
 
 " Set indent to two spaces
 set autoindent expandtab tabstop=2 shiftwidth=2
-
