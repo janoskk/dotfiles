@@ -1,7 +1,7 @@
 {
   "operations": {
     "Darwin": {
-      ".amethyst.yml": "$HOME/.amethyst.yml",
+      ".config/amethyst/amethyst.yml": "$HOME/.config/amethyst/amethyst.yml",
       ".config/kitty/kitty.app.png": "$HOME/.config/kitty/kitty.app.png",
       ".config/kitty/kitty.conf": "$HOME/.config/kitty/kitty.conf",
       ".config/kitty/macos-launch-services-cmdline": "$HOME/.config/kitty/macos-launch-services-cmdline",

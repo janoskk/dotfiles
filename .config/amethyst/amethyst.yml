@@ -1,9 +1,9 @@
 layouts:
   - two-pane
   - fullscreen
-  - tall
-  - wide
-  - column
+#  - tall
+#  - wide
+#  - column
 
 mod1:
   - option
