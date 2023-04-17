@@ -152,14 +152,24 @@ function rb {
 #
 unalias close-branch 2>/dev/null
 function close-branch {
-    echo "The following local branches will be deleted:"
+  if [ "$1" != "" ]; then
+    echo "The following branch will be deleted:"
+    echo "$1"
+    echo ""
+    echo "Press enter to continue"
+    read a
+    git branch -D "$1"
+    git push origin --delete "$1"
+  else
+    echo "The following local branches will be deleted:" 
     git branch --merged | egrep -v "(^\*|master|develop)"
     echo
     echo "Do you really want to delete them? [y/N]"
     read a
     if [ "$a" = "y" ] || [ "$a" = "Y" ]; then
-        git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d
+      git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d
     fi
+  fi
 }
 
 #
