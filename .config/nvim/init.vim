@@ -58,6 +58,8 @@ if (!exists('g:vscode'))
 
   " Setup enhanced status line
   lua require('lualine').setup { options = { theme = 'gruvbox' } }
+
+  set rtp+=/opt/homebrew/opt/fzf
 endif
 
 " Set indent to two spaces
