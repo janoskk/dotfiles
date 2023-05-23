@@ -2,6 +2,7 @@
   "operations": {
     "Darwin": {
       ".config/amethyst/amethyst.yml": "$HOME/.config/amethyst/amethyst.yml",
+      ".config/git/allowed_signers": "$HOME/.config/git/allowed_signers",
       ".config/kitty/kitty.app.png": "$HOME/.config/kitty/kitty.app.png",
       ".config/kitty/kitty.conf": "$HOME/.config/kitty/kitty.conf",
       ".config/kitty/macos-launch-services-cmdline": "$HOME/.config/kitty/macos-launch-services-cmdline",
@@ -20,6 +21,7 @@
       "Library/Preferences/com.googlecode.iterm2.plist": "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
     },
     "Linux": {
+      ".config/git/allowed_signers": "$HOME/.config/git/allowed_signers",
       ".config/nvim/init.vim": "$HOME/.config/nvim/init.vim",
       ".config/tmux/tmux.conf": "$HOME/.config/tmux/tmux.conf",
       ".gitconfig": "$HOME/.gitconfig",
