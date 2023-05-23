@@ -6,10 +6,22 @@ alias la='ls -la'
 alias grep='grep --color=auto'
 alias vim=nvim
 alias s='git status'
+alias ssh-native=/usr/bin/ssh
 
 # kitty's ssh connection handler
 if [ -n "${KITTY_PID}" ]; then
   alias ssh="kitty +kitten ssh"
+elif [ "${TERM_PROGRAM}" = "WezTerm" ]; then
+  function ssh() {
+    case "$1" in
+    janoskk-ryzen|janoskk-mac-mini|janoskk-mba)
+      wezterm cli spawn --domain-name "$1"
+      ;;
+    *)
+      /usr/bin/ssh $@
+      ;;
+    esac
+  }
 fi
 
 # list my open PRs on GitHub
