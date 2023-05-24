@@ -120,8 +120,7 @@ for config in ~/.zshrc.d/*; do
   source ${config}
 done
 
-# McFly
-eval "$(mcfly init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Alias to rewrite current terminal color settings
 nox() {
@@ -136,4 +135,5 @@ reload-term-colors()
 }
 typeset -a preexec_functions
 preexec_functions+=(reload-term-colors)
+
 
