@@ -24,6 +24,12 @@ elif [ "${TERM_PROGRAM}" = "WezTerm" ]; then
   }
 fi
 
+# git checkout with fzf-git
+gco() {
+  local selected=$(_fzf_git_each_ref --no-multi)
+  [ -n "$selected" ] && git checkout "$selected"
+}
+
 # list my open PRs on GitHub
 alias pr='[[ -d .git ]] && gh pr list --author "@me" --json title,url || gh pr list --author "@me" --json title,url -R https://github.com/plexinc/plex-media-server.git'
 alias prs="pr"

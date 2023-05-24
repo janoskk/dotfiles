@@ -62,10 +62,10 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE=~/.zsh_history
 
-bindkey '\ec'     fzy-cd-widget
-bindkey '^T'      fzy-file-widget
-bindkey '^R'      fzy-history-widget
-bindkey '^P'      fzy-proc-widget
+#bindkey '\ec'     fzy-cd-widget
+#bindkey '^T'      fzy-file-widget
+#bindkey '^R'      fzy-history-widget
+#bindkey '^P'      fzy-proc-widget
 bindkey '^ '      autosuggest-execute
 bindkey "^[[H"    beginning-of-line
 bindkey "^[[F"    end-of-line
