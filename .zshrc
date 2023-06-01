@@ -137,3 +137,5 @@ typeset -a preexec_functions
 preexec_functions+=(reload-term-colors)
 
 
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
